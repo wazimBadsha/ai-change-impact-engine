@@ -1,0 +1,6 @@
+[
+  {"release_id":"r1","cohort":"billing","traffic":0.28,"regression_rate":0.18,"latency_delta":0.9,"cost_delta":0.2,"incident":0.0},
+  {"release_id":"r2","cohort":"billing","traffic":0.28,"regression_rate":0.31,"latency_delta":1.1,"cost_delta":0.4,"incident":1.0},
+  {"release_id":"r3","cohort":"general","traffic":0.72,"regression_rate":0.04,"latency_delta":0.2,"cost_delta":0.1,"incident":0.0},
+  {"release_id":"r4","cohort":"general","traffic":0.72,"regression_rate":0.07,"latency_delta":0.3,"cost_delta":0.2,"incident":0.0}
+]
