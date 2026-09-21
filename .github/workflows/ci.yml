@@ -1,0 +1,17 @@
+name: CI
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -e '.[dev]'
+      - run: pytest -q
+      - run: python examples/release_forecast.py
+      - run: python -m aici.cli forecast examples/change.json examples/history.json --json > forecast.json
+      - run: python -m aici.cli gate forecast.json --policy examples/policy.json || test $? -eq 10
