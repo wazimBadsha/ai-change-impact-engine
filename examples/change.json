@@ -1,0 +1,13 @@
+{
+  "release_id": "checkout-assistant-v4",
+  "baseline": "checkout-assistant-v3",
+  "changes": [
+    {"kind": "model", "name": "reasoning-model", "from": "model-a", "to": "model-b"},
+    {"kind": "retrieval", "name": "refund-policy-index", "from": "sha-old", "to": "sha-new"},
+    {"kind": "prompt", "name": "refund-policy", "from": "p17", "to": "p18"}
+  ],
+  "cohorts": [
+    {"name": "billing", "traffic": 0.28},
+    {"name": "general", "traffic": 0.72}
+  ]
+}
