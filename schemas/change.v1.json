@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["release_id", "baseline", "changes", "cohorts"],
+  "properties": {
+    "release_id": {"type":"string"},
+    "baseline": {"type":"string"},
+    "changes": {"type":"array"},
+    "cohorts": {"type":"array"}
+  }
+}
